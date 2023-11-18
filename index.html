@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SGPA Calculator</title>
+    <link rel="icon" href="Moon Developers logo.jpeg" type="image/jpeg">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div id="preloader"></div>
+    <div id="titleBox">
+        <h1>SGPA CALCULATOR</h1>
+        <p>Developed by Moon Developers</p>
+    </div>
+
+    <div id="sgpaForm">
+        <table>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Subject Name</th>
+                    <th>Credits</th>
+                    <th>GPA</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td><input type="text" name="subjectName" placeholder="Enter Subject Name" autofocus></td>
+                    <td><input type="number" name="credits" placeholder="Credits"></td>
+                    <td>
+                        <select name="gpa">
+                            <option value="10">S</option>
+                            <option value="9">A</option>
+                            <option value="8">B</option>
+                            <option value="7">C</option>
+                            <option value="6">D</option>
+                            <option value="5">E</option>
+                            <option value="0">F</option>
+                            <option value="0">AB</option>
+                        </select>
+                    </td>
+                    <td><button class="delete-button" disabled onclick="deleteRow(this)">Delete</button></td>
+                </tr>
+            </tbody>
+        </table>
+        <div id="buttonContainer">
+            <button id="addSubjectBtn" onclick="addSubject()">Add Subject</button>
+            <button id="SubmitBtn" onclick="calculateSGPA()">Submit</button>
+        </div>
+        <div id="errorMessages"></div>
+
+        <div id="resultSection">
+            <p id="sgpaMessage"></p>
+            <p>Total Credits: <span id="totalCredits">0</span></p>
+            <a href="CGPA.html">Click here to Calculate CGPA</a>
+        </div>
+    </div>
+    <div id="feedback">
+        <a href="https://forms.gle/ME9N5g2WuKb9W1Xy5">Have any Queries?</a>
+    </div>
+
+    <!-- "Follow us" section with LinkedIn emoji -->
+    <div id="followUs">
+        <p>Follow us on LinkedIn: <a href="https://www.linkedin.com/company/moondevelopers" target="_blank">MOON Developers</a></p>
+    </div>
+    <script src="sgpa.js"></script>
+    <script>
+        var loader= document.getElementById("preloader");
+
+        window.addEventListener("load",function(){
+            loader.style.display="none";
+        })
+    </script>
+</body>
+</html>

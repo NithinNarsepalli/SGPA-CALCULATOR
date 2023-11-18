@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CGPA Calculator</title>
+    <link rel="icon" href="Moon Developers logo.jpeg" type="image/jpeg">
+    <link rel="stylesheet" href="cgpa.css">
+</head>
+<body>
+    <div id="preloader"></div>
+    <div id="titleBox">
+        <h1>CGPA CALCULATOR</h1>
+        <p>Developed by Moon Developers</p>
+    </div>
+
+    <div id="cgpaForm">
+        <table>
+            <thead>
+                <tr>
+                    <th>Semester</th>
+                    <th>Credits</th>
+                    <th>SGPA</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td><input type="number" name="credits" id="credits1" placeholder="Credits"></td>
+                    <td><input type="number" name="sgpa" id="sgpa1" placeholder="SGPA"></td>
+                    <td><button class="delete-button" disabled onclick="deleteRow(this)">Delete</button></td>
+                </tr>
+            </tbody>
+        </table>
+        <button id="addSemesterBtn" onclick="addSemester()">Add Semester</button>
+        <button id="SubmitBtn" onclick="calculateCGPA()">Submit</button>
+        <div id="resultSection">
+            <p id="cgpaMessage"></p>
+            <p>Total Credits: <span id="totalCredits">0</span></p>
+            <a href="index.html">Click here to Calculate SGPA</a>
+        </div>
+    </div>
+    <div id="feedback">
+        <a href="https://forms.gle/ME9N5g2WuKb9W1Xy5">Have any suggestions?</a>
+    </div>
+    <!-- "Follow us" section with LinkedIn emoji -->
+    <div id="followUs">
+        <p>Follow us on LinkedIn: <a href="https://www.linkedin.com/company/moondevelopers" target="_blank">MOON Developers</a></p>
+    </div>
+    <script src="SCRIPT.js"></script>
+    <script>
+        var loader= document.getElementById("preloader");
+
+        window.addEventListener("load",function(){
+            loader.style.display="none";
+        })
+    </script>
+</body>
+</html>
